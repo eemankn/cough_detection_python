@@ -1,0 +1,30 @@
+{% extends 'hospitaltemp/hospitalhome.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="card">
+                <h5 class="card-header">Hospital Details</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>DATE</th>
+                        <th>START TIME</th>
+                        <th>END TIME</th>
+                        <th>DOCTOR</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for u  in schedule  %}
+                      <tr>
+                        <td>{{u.date}}</td>
+                        <td>{{u.start_time}}</td>
+                        <td>{{u.end_time}}</td>
+                        <td>{{u.doctor}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+{% endblock %}

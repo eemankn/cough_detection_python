@@ -1,0 +1,31 @@
+{% extends 'admintemp/admin.html' %}
+{% load crispy_forms_filters %}
+{% block content %}
+<div class="card">
+                <h5 class="card-header">Hospital Details</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>LOCATION</th>
+                        <th>E-mail</th>
+                        <th>Phone_number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for Hspt in Hspt %}
+                      <tr>
+                        <td>{{Hspt.name}}</td>
+                        <td>{{Hspt.address}}</td>
+                        <td>{{Hspt.location}}</td>
+                        <td>{{Hspt.email}}</td>
+                        <td>{{Hspt.phone_number}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+{% endblock %}

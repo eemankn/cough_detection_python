@@ -1,0 +1,123 @@
+{% extends 'doctortemp/doctorhome.html' %}
+{% block content %}
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col">
+<!--        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">-->
+<!--        </nav>-->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img src="{{doctor.image.url}}" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{doctor.Name}}</h5>
+<!--            <p class="text-muted mb-1">Full Stack Developer</p>-->
+<!--            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>-->
+<!--            <div class="d-flex justify-content-center mb-2">-->
+<!--              <button type="button" class="btn btn-primary">Follow</button>-->
+<!--              <button type="button" class="btn btn-outline-primary ms-1">Message</button>-->
+<!--            </div>-->
+          </div>
+        </div>
+        <div class="card mb-4 mb-lg-0">
+          <div class="card-body p-0">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.name}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Location</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.address}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Hospital Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.hospital_name}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Qualification</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.qualification}}</p>
+              </div>
+            </div>
+              <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">specialization</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.speacialisation}}</p>
+              </div>
+            </div>
+              <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Experience</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.experience}}</p>
+              </div>
+            </div>
+             <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email-id</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.email}}</p>
+              </div>
+            </div>
+             <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{doctor.phone_number}}</p>
+              </div>
+            </div>
+              <hr>
+          </div>
+            <div class="row">
+              <div class="col-sm-3">
+<!--                <p class="mb-0">Name</p>-->
+              </div>
+               <div class="d-flex justify-content-center mb-2">
+              <a class="btn btn-primary" href="{% url 'updateDoctor' doctor.id %}" role="button">Update</a>
+            </div>
+            </div>
+        </div>
+      </div>
+  </div>
+ </section>
+
+
+{% endblock %}
